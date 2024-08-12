@@ -219,8 +219,8 @@ func (c *Config) RemoteTokenExpiry() string {
 }
 
 // OIDCServer returns all the OpenID Connect settings needed to connect to a server.
-func (c *Config) OIDCServer() (string, string, string, string) {
-	return c.m.GetString("oidc.issuer"), c.m.GetString("oidc.client.id"), c.m.GetString("oidc.audience"), c.m.GetString("oidc.claim")
+func (c *Config) OIDCServer() (string, string, string, string, string) {
+	return c.m.GetString("oidc.issuer"), c.m.GetString("oidc.client.id"), c.m.GetString("oidc.scope"), c.m.GetString("oidc.audience"), c.m.GetString("oidc.claim")
 }
 
 // ClusterHealingThreshold returns the configured healing threshold, i.e. the
